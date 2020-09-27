@@ -25,8 +25,8 @@ const SearchParams = () => {
     setBreeds([]);
     setBreed("");
     pet.breeds(animal).then(({ breeds: apiBreeds }) => {
-      const breedStrings = apiBreeds.map(({ name }) => name); //{name}=breedsObj
-      setBreeds(breedStrings); //name=breedsObj.name
+      const breedStrings = apiBreeds.map(({ name }) => name);
+      setBreeds(breedStrings); 
     }, console.error);
   }, [animal, setBreeds, setBreed]); //dependancy list(these are the factors on which useEffect gets called on i.e.
   //Only if these change will useEffect request a new set of breeds instead of calling a new set of breeds after each render
