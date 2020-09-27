@@ -46,7 +46,7 @@ const SearchParams = () => {
             value={location}
             placeholder="Location"
             onChange={(event) => {
-              setLocation(event.target.value);
+              setLocation(event.target.value);//this updates the default value every time a new event is entered in the input field.
             }}
           />
         </label>
@@ -57,7 +57,7 @@ const SearchParams = () => {
           <select
             value={theme}
             onChange={(event) => setTheme(event.target.value)}
-            onBlur={(event) => setTheme(event.target.value)}
+            onBlur={(event) => setTheme(event.target.value)}//Adds a default function when an object loses focus.
           >
             <option value="peru">Peru</option>
             <option value="darkblue">Dark Blue</option>
