@@ -27,7 +27,7 @@ class Details extends React.Component {
         });
       }, console.error);
   }
-  toggleModal = () => this.setState({ showModal: !this.state.showModal });
+  toggleModal = () => this.setState({ showModal: !this.state.showModal });//sets show modal to true
   adopt = () => navigate(this.state.url);
 
   render() {
@@ -72,7 +72,7 @@ class Details extends React.Component {
                 </div>
               </div>
             </Modal>
-          ) : null}
+          ) : null}//will show nothing if youre not showing the modal
         </div>
       </div>
     );
