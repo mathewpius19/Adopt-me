@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-const useDropdown = (label, defaultState, options) => {
+const useDropdown = (label, defaultState, options) => {//label represents what the hook is used for.default state is default value and options are what options you want to pass to user.
   const [state, setState] = useState(defaultState);
-  const id = `use-dropdown-${label.replace("", "").toLowerCase()}`;
+  const id = `use-dropdown-${label.replace("", "").toLowerCase()}`;//removes the space and converts all upercase characters to lower case.
   const Dropdown = () => (
     <label htmlFor={id}>
       {label};
@@ -14,7 +14,7 @@ const useDropdown = (label, defaultState, options) => {
         disabled={options.length === 0}
       >
         <option>ALL</option>
-        {options.map((item) => {
+        {options.map((item) => {//passes in values that we want to view as options for every abstract hook we pass into our custom hook.
           return (
             <option value={item} key={item}>
               {item}
